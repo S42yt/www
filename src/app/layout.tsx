@@ -44,8 +44,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`} suppressHydrationWarning>
       <body className="min-h-screen flex flex-col antialiased bg-background text-foreground selection:bg-foreground/10">
-      <Background variant="gradient" blur animated>
         <Navbar />
+        <Background variant="gradient" blur animated>
         
         <main className="flex-grow pt-28 pb-24 px-4 sm:px-6 mx-auto w-full max-w-7xl">
           {children}
