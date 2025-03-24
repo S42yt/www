@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import Background from "@/components/Background";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.scss";
+import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ToTop from "@/components/ToTop"
@@ -47,12 +47,10 @@ export default function RootLayout({
       <body className="min-h-screen flex flex-col antialiased bg-background text-foreground selection:bg-foreground/10">
         <Navbar />
         <Background variant="gradient" blur animated>
-        
-        <main className="flex-grow pt-28 pb-24 px-4 sm:px-6 mx-auto w-full max-w-7xl">
-          {children}
-        </main>
-        
-        <Footer />
+          <main className="flex-grow pt-28 pb-24 px-4 sm:px-6 mx-auto w-full max-w-7xl">
+            {children}
+          </main>
+          <Footer />
         </Background>
         <ToTop />
       </body>

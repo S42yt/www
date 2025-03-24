@@ -1,4 +1,5 @@
 import React from 'react';
+import './style/background.css'; 
 
 interface BackgroundProps {
   children?: React.ReactNode;
@@ -26,30 +27,16 @@ export default function Background({
   };
   
   const blurClass = blur ? 'backdrop-blur-[6px]' : '';
-  const animationClass = animated ? 'transition-all duration-300 will-change-transform' : '';
-
-  const gradientElements = () => {
-    if (intensity === 'low') {
-      return (
-        <div className="absolute top-40 right-10 w-80 h-80 bg-purple-900/20 rounded-full blur-xl opacity-40 transform-gpu" />
-      );
-    }
-    
-    return (
-      <>
-        {}
-        <div className="absolute -top-20 -left-20 w-72 h-72 bg-purple-900/20 rounded-full blur-xl opacity-50 animate-pulse transform-gpu" />
-        <div className="absolute top-40 right-10 w-80 h-80 bg-purple-950/25 rounded-full blur-xl opacity-40 transform-gpu" />
-        {intensity === 'high' && (
-          <div className="absolute -bottom-32 left-20 w-80 h-80 bg-indigo-900/20 rounded-full blur-xl opacity-50 animate-pulse-slow transform-gpu" />
-        )}
-      </>
-    );
-  };
+  const animationClass = animated ? 'transition-all duration-300' : '';
+  const intensityClass = `bg-intensity-${intensity}`;
 
   return (
-    <div className={`${baseClasses} ${variantClasses[variant]} ${blurClass} ${animationClass} ${className}`}>
-      {gradientElements()}
+    <div className={`${baseClasses} ${variantClasses[variant]} ${blurClass} ${animationClass} ${intensityClass} ${className}`}>
+      <div className="bg-decoration-layer">
+        <div className="bg-blob top-blob" />
+        <div className="bg-blob right-blob" />
+        {intensity === 'high' && <div className="bg-blob bottom-blob" />}
+      </div>
       
       <div className="absolute inset-0 bg-background/30 backdrop-blur-[4px]" />
       

@@ -1,0 +1,102 @@
+.bg-decoration-layer {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  .bg-blob {
+    position: absolute;
+    border-radius: 100%;
+    filter: blur(24px);
+    transform: translateZ(0);
+    will-change: opacity;
+    transition: opacity 0.5s ease-out;
+  }
+  
+  .top-blob {
+    width: 18rem;
+    height: 18rem;
+    top: -5rem;
+    left: -5rem;
+    background: rgba(126, 34, 206, 0.2);
+    opacity: 0.5;
+  }
+  
+  .right-blob {
+    width: 20rem;
+    height: 20rem;
+    top: 10rem;
+    right: 2.5rem;
+    background: rgba(109, 40, 217, 0.25);
+    opacity: 0.4;
+  }
+  
+  .bottom-blob {
+    width: 20rem;
+    height: 20rem;
+    bottom: -8rem;
+    left: 5rem;
+    background: rgba(79, 70, 229, 0.2);
+    opacity: 0.5;
+  }
+  
+  .bg-intensity-low .top-blob,
+  .bg-intensity-low .bottom-blob {
+    opacity: 0;
+  }
+  
+  .bg-intensity-low .right-blob {
+    width: 20rem;
+    height: 20rem;
+    top: 10rem;
+    right: 2.5rem;
+    opacity: 0.4;
+  }
+  
+  @keyframes gentle-pulse {
+    0% {
+      opacity: 0.5;
+      transform: translateZ(0) scale(1);
+    }
+    50% {
+      opacity: 0.4;
+      transform: translateZ(0) scale(1.02);
+    }
+    100% {
+      opacity: 0.5;
+      transform: translateZ(0) scale(1);
+    }
+  }
+  
+  @keyframes slow-pulse {
+    0% {
+      opacity: 0.5;
+      transform: translateZ(0) scale(1);
+    }
+    50% {
+      opacity: 0.4;
+      transform: translateZ(0) scale(1.03);
+    }
+    100% {
+      opacity: 0.5;
+      transform: translateZ(0) scale(1);
+    }
+  }
+  
+  .bg-intensity-medium .top-blob,
+  .bg-intensity-high .top-blob {
+    animation: gentle-pulse 6s infinite ease-in-out;
+  }
+  
+  .bg-intensity-high .bottom-blob {
+    animation: slow-pulse 8s infinite ease-in-out;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .bg-blob {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
