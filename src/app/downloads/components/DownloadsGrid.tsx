@@ -20,7 +20,7 @@ export default function DownloadsGrid({
 
   const filteredDownloads = initialDownloads.filter((item) => {
     const matchesPlatform =
-      activePlatform === "all" || item.platform.includes(activePlatform as any);
+      activePlatform === "all" || item.platform.includes(activePlatform as "windows" | "macos" | "linux" | "android" | "ios");
     const matchesCategory =
       activeCategory === "all" || item.category === activeCategory;
     const matchesSearch =
