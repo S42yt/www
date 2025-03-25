@@ -25,6 +25,11 @@ const nextConfig: NextConfig = {
         hostname: "img.shields.io",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "github.com",
+        pathname: "/**",
+      }
     ],
   },
   compiler: {

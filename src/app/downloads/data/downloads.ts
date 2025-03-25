@@ -12,6 +12,7 @@ export interface DownloadItem {
   releaseDate: string;
   featured?: boolean;
   latest?: boolean;
+  soon?: boolean;
 }
 
 export const platforms = [
@@ -43,10 +44,25 @@ export const downloadItems: DownloadItem[] = [
     platform: ["windows"],
     version: "1.2.3",
     downloadUrl: "/downloads/files/better-unreleased-1.2.3.exe",
-    fileName: "better-unreleased-1.2.3.exe",
-    fileSize: "14.2 MB",
-    releaseDate: "2023-09-15",
-    featured: true,
+    fileName: "???",
+    fileSize: "???",
+    releaseDate: "",
     latest: true,
+    soon: true,
   },
+  {
+    id: "trade-cycle",
+    title: "Trade Cycle",
+    description:"TradeCycle is a Paper plugin written in Kotlin to cycle through Villager trades.",
+    image: "https://github.com/S42yt/TradeCycle/blob/master/assets/cycle_success.gif?raw=true",
+    category: "minecraft",
+    platform: ["windows", "macos", "linux"],
+    version: "1.4.0",
+    downloadUrl: "https://github.com/S42yt/TradeCycle/releases/download/v.1.4/tradecycler-1.4.jar",
+    fileName: "tradecycler-1.4.jar",
+    fileSize: "1.58 MB",
+    releaseDate: "23.03.2025",
+    latest: true,
+    featured: true,
+  }
 ];

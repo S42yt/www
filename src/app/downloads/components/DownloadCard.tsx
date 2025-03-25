@@ -14,6 +14,7 @@ import {
   faCode,
   faLayerGroup,
   faFire,
+  faClock,
 } from "@fortawesome/free-solid-svg-icons";
 import { DownloadItem } from "../data/downloads";
 
@@ -104,7 +105,7 @@ export default function DownloadCard({ download }: DownloadCardProps) {
   };
 
   return (
-    <div className="glass-card overflow-hidden transition-all duration-300 group">
+    <div className="glass-card overflow-hidden transition-all duration-300 group hover:scale-[1.02] transform">
       <div className="relative h-44 w-full overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer" />
 
@@ -134,7 +135,16 @@ export default function DownloadCard({ download }: DownloadCardProps) {
               <span>Latest</span>
             </div>
           )}
+
+          {/* Soon badge */}
+          {download.soon && (
+            <div className="px-3 py-1 bg-blue-500/80 text-white text-xs font-medium rounded-full backdrop-blur-sm flex items-center gap-1.5">
+              <FontAwesomeIcon icon={faClock} className="h-3 w-3" />
+              <span>Coming Soon</span>
+            </div>
+          )}
         </div>
+        
 
         {/* Category badge */}
         <div className="absolute top-3 left-3 px-3 py-1 bg-background/50 backdrop-blur-sm border border-white/10 rounded-full text-xs flex items-center gap-1.5">
@@ -174,20 +184,33 @@ export default function DownloadCard({ download }: DownloadCardProps) {
           <div className="flex items-center gap-2">{renderPlatformIcons()}</div>
         </div>
 
-        {/* Download button */}
-        <Link
-          href={download.downloadUrl}
-          onClick={handleDownload}
-          className="flex items-center justify-center w-full gap-2 px-4 py-3 bg-accent text-white rounded-lg text-sm font-medium transition-colors hover:bg-accent/90 disabled:opacity-50 disabled:cursor-wait"
-          download={download.fileName}
-          prefetch={false}
-        >
-          <FontAwesomeIcon
-            icon={faDownload}
-            className={`h-4 w-4 ${downloading ? "animate-bounce" : ""}`}
-          />
-          <span>{downloading ? "Downloading..." : "Download Now"}</span>
-        </Link>
+        {/* Download or Coming Soon button */}
+        {download.soon ? (
+          <button
+            disabled
+            className="flex items-center justify-center w-full gap-2 px-4 py-3 bg-blue-500/80 text-white rounded-lg text-sm font-medium opacity-80 cursor-not-allowed"
+          >
+            <FontAwesomeIcon
+              icon={faClock}
+              className="h-4 w-4"
+            />
+            <span>Coming Soon</span>
+          </button>
+        ) : (
+          <Link
+            href={download.downloadUrl}
+            onClick={handleDownload}
+            className="flex items-center justify-center w-full gap-2 px-4 py-3 bg-accent text-white rounded-lg text-sm font-medium transition-colors hover:bg-accent/90 disabled:opacity-50 disabled:cursor-wait"
+            download={download.fileName}
+            prefetch={false}
+          >
+            <FontAwesomeIcon
+              icon={faDownload}
+              className={`h-4 w-4 ${downloading ? "animate-bounce" : ""}`}
+            />
+            <span>{downloading ? "Downloading..." : "Download Now"}</span>
+          </Link>
+        )}
       </div>
     </div>
   );
