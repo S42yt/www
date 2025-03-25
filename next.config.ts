@@ -6,32 +6,30 @@ const nextConfig: NextConfig = {
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'avatars.githubusercontent.com',
-        pathname: '/u/**', 
+        protocol: "https",
+        hostname: "avatars.githubusercontent.com",
+        pathname: "/u/**",
       },
       {
-        protocol: 'https',
-        hostname: 'camo.githubusercontent.com',
-        pathname: '/**', 
+        protocol: "https",
+        hostname: "camo.githubusercontent.com",
+        pathname: "/**",
       },
       {
-        protocol: 'https',
-        hostname: 'github-readme-stats.vercel.app',
-        pathname: '/**',
+        protocol: "https",
+        hostname: "github-readme-stats.vercel.app",
+        pathname: "/**",
       },
       {
-        protocol: 'https',
-        hostname: 'img.shields.io',
-        pathname: '/**',
-      }
+        protocol: "https",
+        hostname: "img.shields.io",
+        pathname: "/**",
+      },
     ],
   },
-  swcMinify: true,
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
+    removeConsole: process.env.NODE_ENV === "production",
   },
-  optimizeFonts: true,
   poweredByHeader: false,
 };
 

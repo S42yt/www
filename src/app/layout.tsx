@@ -4,7 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import ToTop from "@/components/ToTop"
+import ToTop from "@/components/ToTop";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,7 +21,13 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "S42.site",
   description: "Software Engineer & Developer Portfolio",
-  keywords: ["developer", "portfolio", "software engineer", "coding", "web development"],
+  keywords: [
+    "developer",
+    "portfolio",
+    "software engineer",
+    "coding",
+    "web development",
+  ],
   authors: [{ name: "Musa", url: "https://github.com/S42yt" }],
   creator: "Musa",
   publisher: "S42",
@@ -33,7 +39,7 @@ export const viewport: Viewport = {
   initialScale: 1,
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" }
+    { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
   ],
 };
 
@@ -43,7 +49,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable}`}
+      suppressHydrationWarning
+    >
       <body className="min-h-screen flex flex-col antialiased bg-background text-foreground selection:bg-foreground/10">
         <Navbar />
         <Background variant="gradient" blur animated>

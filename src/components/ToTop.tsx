@@ -1,7 +1,7 @@
 "use client";
-import { useState, useEffect, useRef } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
+import { useState, useEffect, useRef } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 export default function ToTop() {
   const [isVisible, setIsVisible] = useState(false);
@@ -12,10 +12,10 @@ export default function ToTop() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      
+
       if (scrollPosition > 400) {
         setIsVisible(true);
-        
+
         const newOpacity = Math.max(1 - scrollPosition / 400, 0.3);
         setOpacity(newOpacity);
       } else {
@@ -23,19 +23,19 @@ export default function ToTop() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
     const button = buttonRef.current;
     if (button) {
       if (isVisible) {
-        button.style.transform = 'translateX(0)';
-        button.style.opacity = isHovering ? '1' : opacity.toString();
+        button.style.transform = "translateX(0)";
+        button.style.opacity = isHovering ? "1" : opacity.toString();
       } else {
-        button.style.transform = 'translateX(100px)';
-        button.style.opacity = '0';
+        button.style.transform = "translateX(100px)";
+        button.style.opacity = "0";
       }
     }
   }, [isVisible, isHovering, opacity]);
@@ -43,7 +43,7 @@ export default function ToTop() {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   };
 
@@ -65,19 +65,20 @@ export default function ToTop() {
       onMouseLeave={() => setIsHovering(false)}
       aria-label="Scroll to top"
       style={{
-        transform: 'translateX(100px)',
+        transform: "translateX(100px)",
         opacity: 0,
-        boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1), 0 0 0 2px rgba(139, 92, 246, 0.2)'
+        boxShadow:
+          "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1), 0 0 0 2px rgba(139, 92, 246, 0.2)",
       }}
     >
       <div className="relative w-6 h-6">
         <div className="absolute -inset-4 bg-gradient-to-tr from-purple-600/30 to-indigo-600/30 rounded-full blur-lg opacity-70 animate-pulse"></div>
-        
+
         <div className="absolute inset-0 rounded-full ring-4 ring-accent/20 blur-sm"></div>
-        
-        <FontAwesomeIcon 
-          icon={faArrowUp} 
-          className="h-6 w-6 text-accent/90 drop-shadow-md" 
+
+        <FontAwesomeIcon
+          icon={faArrowUp}
+          className="h-6 w-6 text-accent/90 drop-shadow-md"
         />
       </div>
     </button>

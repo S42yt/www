@@ -3,27 +3,27 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  
+
   --accent: #6d28d9;
   --accent-light: #a78bfa;
   --accent-dark: #5b21b6;
-  
+
   --muted: #f3f4f6;
   --muted-foreground: #6b7280;
-  
+
   --border: rgba(0, 0, 0, 0.08);
   --ring: rgba(109, 40, 217, 0.3);
-  
+
   --card: #ffffff;
   --card-foreground: #171717;
   --popover: #ffffff;
   --popover-foreground: #171717;
-  
+
   --primary: #6d28d9;
   --primary-foreground: #ffffff;
   --secondary: #f4f4f5;
   --secondary-foreground: #18181b;
-  
+
   --success: #10b981;
   --warning: #f59e0b;
   --error: #ef4444;
@@ -42,22 +42,22 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
-    
+
     --accent: #a78bfa;
     --accent-light: #c4b5fd;
     --accent-dark: #7c3aed;
-    
+
     --muted: #202020;
     --muted-foreground: #a1a1aa;
-    
+
     --border: rgba(255, 255, 255, 0.1);
     --ring: rgba(167, 139, 250, 0.3);
-    
+
     --card: #121212;
     --card-foreground: #ededed;
     --popover: #121212;
     --popover-foreground: #ededed;
-    
+
     --primary: #a78bfa;
     --primary-foreground: #0a0a0a;
     --secondary: #27272a;
@@ -70,12 +70,21 @@ html {
 }
 
 body {
-  font-feature-settings: "rlig" 1, "calt" 1;
+  font-feature-settings:
+    "rlig" 1,
+    "calt" 1;
   text-rendering: optimizeLegibility;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: 1.2;
   letter-spacing: -0.02em;
 }
@@ -98,7 +107,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .gradient-text {
-  background: linear-gradient(90deg, var(--accent) 0%, var(--accent-light) 100%);
+  background: linear-gradient(
+    90deg,
+    var(--accent) 0%,
+    var(--accent-light) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -115,11 +128,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes fadeIn {
-  from { 
+  from {
     opacity: 0;
     transform: translateY(10px);
   }
-  to { 
+  to {
     opacity: 1;
     transform: translateY(0);
   }
