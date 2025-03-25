@@ -22,7 +22,6 @@ export const platforms = [
   { id: "linux", name: "Linux" },
   { id: "android", name: "Android" },
   { id: "ios", name: "iOS" },
-  { id: "minecraft", name: "Minecraft" },
 ];
 
 export const categories = [
@@ -34,22 +33,6 @@ export const categories = [
 ];
 
 export const downloadItems: DownloadItem[] = [
-  {
-    id: "better-unreleased",
-    title: "Better Unreleased",
-    description:
-      "A music player for local files with playlist management and equalizer",
-    image: "https://avatars.githubusercontent.com/u/176326202?v=4",
-    category: "app",
-    platform: ["windows"],
-    version: "1.2.3",
-    downloadUrl: "/downloads/files/better-unreleased-1.2.3.exe",
-    fileName: "???",
-    fileSize: "???",
-    releaseDate: "",
-    latest: true,
-    soon: true,
-  },
   {
     id: "trade-cycle",
     title: "Trade Cycle",
@@ -67,5 +50,21 @@ export const downloadItems: DownloadItem[] = [
     releaseDate: "23.03.2025",
     latest: true,
     featured: true,
+  },
+  {
+    id: "better-unreleased",
+    title: "Better Unreleased",
+    description:
+      "A music player for local files with playlist management and equalizer",
+    image: "https://avatars.githubusercontent.com/u/176326202?v=4",
+    category: "app",
+    platform: ["windows"],
+    version: "1.2.3",
+    downloadUrl: "/downloads/files/better-unreleased-1.2.3.exe",
+    fileName: "???",
+    fileSize: "???",
+    releaseDate: "Coming Soon",
+    latest: true,
+    soon: true,
   },
 ];

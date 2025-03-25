@@ -18,7 +18,7 @@ export const projects: Project[] = [
     title: "Desto.lol",
     description:
       "A modern web platform for gamers with customizable profiles and game integration.",
-    image: "https://avatars.githubusercontent.com/u/176326202?v=4",
+    image: "https://github.com/S42yt/assets/blob/master/assets/desto/desto-soon.png?raw=true",
     technologies: ["React", "Next.js", "TailwindCSS", "Fastify", "Prisma"],
     category: "web",
     github: "https://github.com/desto-lol",

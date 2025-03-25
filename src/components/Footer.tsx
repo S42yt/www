@@ -1,4 +1,3 @@
-"use client";
 import Link from "next/link";
 
 export default function Footer() {
@@ -23,7 +22,7 @@ export default function Footer() {
         <div className="flex gap-6">
           <div className="group">
             <Link
-              href="https://github.com/S42yt"
+              href="https://github.com/S42yt/www"
               target="_blank"
               rel="noopener noreferrer"
               className="text-foreground/80 group-hover:text-accent transition-colors duration-300 flex items-center gap-2"

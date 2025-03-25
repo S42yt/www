@@ -60,6 +60,7 @@ export default function RootLayout({
           <main className="flex-grow pt-28 pb-24 px-4 sm:px-6 mx-auto w-full max-w-7xl">
             {children}
           </main>
+            <div className="h-20"></div>
           <Footer />
         </Background>
         <ToTop />

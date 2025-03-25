@@ -17,28 +17,35 @@
 }
 
 .fade-in {
+  opacity: 0;
   animation: fadeIn 0.5s ease-out forwards;
+  will-change: opacity;
+  backface-visibility: hidden;
 }
 
 .slide-up {
+  opacity: 0;
+  transform: translateY(20px);
   animation: slideUp 0.5s ease-out forwards;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
 }
 
 @keyframes fadeIn {
-  from {
+  0% {
     opacity: 0;
   }
-  to {
+  100% {
     opacity: 1;
   }
 }
 
 @keyframes slideUp {
-  from {
+  0% {
     opacity: 0;
     transform: translateY(20px);
   }
-  to {
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
@@ -55,6 +62,8 @@
     0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
   animation: pulseBorder 1.5s infinite alternate;
+  will-change: box-shadow;
+  backface-visibility: hidden;
 }
 
 @keyframes pulseBorder {
@@ -69,6 +78,8 @@
 .staggered-item {
   opacity: 0;
   transform: translateY(20px);
+  will-change: transform, opacity;
+  backface-visibility: hidden;
 }
 
 .stagger-container .staggered-item:nth-child(1) {

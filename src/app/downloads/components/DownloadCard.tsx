@@ -95,7 +95,6 @@ export default function DownloadCard({ download }: DownloadCardProps) {
   const handleDownload = () => {
     setDownloading(true);
 
-    // Reset downloading state after 2 seconds
     setTimeout(() => {
       setDownloading(false);
     }, 2000);
@@ -126,14 +125,6 @@ export default function DownloadCard({ download }: DownloadCardProps) {
     }
   };
 
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-    });
-  };
 
   const renderPlatformIcons = () => {
     return (
@@ -151,12 +142,9 @@ export default function DownloadCard({ download }: DownloadCardProps) {
     );
   };
 
-  // Rest of your component remains the same
   return (
     <div className="glass-card overflow-hidden transition-all duration-300 group hover:scale-[1.02] transform">
-      {/* Your existing component JSX... */}
       <div className="relative h-44 w-full overflow-hidden">
-        {/* ... */}
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer" />
 
         <Image
@@ -227,7 +215,7 @@ export default function DownloadCard({ download }: DownloadCardProps) {
           </div>
           <div className="flex items-center gap-2">
             <FontAwesomeIcon icon={faCalendarAlt} className="h-3.5 w-3.5" />
-            <span>Released: {formatDate(download.releaseDate)}</span>
+            <span>Released: {(download.releaseDate)}</span>
           </div>
           <div className="flex items-center gap-2">{renderPlatformIcons()}</div>
         </div>
