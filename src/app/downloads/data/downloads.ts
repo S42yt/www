@@ -29,7 +29,7 @@ export const categories = [
   { id: "all", name: "All Types" },
   { id: "app", name: "Applications" },
   { id: "utility", name: "Utilities" },
-  { id: "game", name: "Games" },
+  { id: "minecraft", name: "Minecraft" },
   { id: "library", name: "Libraries" },
 ];
 
@@ -53,16 +53,19 @@ export const downloadItems: DownloadItem[] = [
   {
     id: "trade-cycle",
     title: "Trade Cycle",
-    description:"TradeCycle is a Paper plugin written in Kotlin to cycle through Villager trades.",
-    image: "https://github.com/S42yt/TradeCycle/blob/master/assets/cycle_success.gif?raw=true",
+    description:
+      "TradeCycle is a Paper plugin written in Kotlin to cycle through Villager trades.",
+    image:
+      "https://github.com/S42yt/TradeCycle/blob/master/assets/cycle_success.gif?raw=true",
     category: "minecraft",
     platform: ["windows", "macos", "linux"],
     version: "1.4.0",
-    downloadUrl: "https://github.com/S42yt/TradeCycle/releases/download/v.1.4/tradecycler-1.4.jar",
+    downloadUrl:
+      "https://github.com/S42yt/TradeCycle/releases/download/v.1.4/tradecycler-1.4.jar",
     fileName: "tradecycler-1.4.jar",
     fileSize: "1.58 MB",
     releaseDate: "23.03.2025",
     latest: true,
     featured: true,
-  }
+  },
 ];

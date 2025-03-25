@@ -28,8 +28,10 @@ export const projects: Project[] = [
   {
     id: "cutecraft",
     title: "CuteCraft.net",
-    description: "CuteCraft.net is a German Minecaft CityBuild server, offering the perfect environment for building, having fun, and making new friends.",
-    image: "https://github.com/CuteCraft-Network/server-media/blob/cutecraft/minecraft_servers/cutecraft/background.png?raw=true",
+    description:
+      "CuteCraft.net is a German Minecaft CityBuild server, offering the perfect environment for building, having fun, and making new friends.",
+    image:
+      "https://github.com/CuteCraft-Network/server-media/blob/cutecraft/minecraft_servers/cutecraft/background.png?raw=true",
     technologies: ["Next.JS", "TypeScript"],
     category: "minecraft",
     github: "https://github.com/cutecraft-network",
@@ -41,7 +43,8 @@ export const projects: Project[] = [
     title: "Trade Cycle",
     description:
       "TradeCycle is a Paper plugin written in Kotlin to cycle through Villager trades.",
-    image: "https://github.com/S42yt/TradeCycle/blob/master/assets/cycle_success.gif?raw=true",
+    image:
+      "https://github.com/S42yt/TradeCycle/blob/master/assets/cycle_success.gif?raw=true",
     technologies: ["Kotlin", "Paper API", "Minecraft"],
     category: "minecraft",
     github: "https://github.com/S42yt/TradeCycle",
@@ -94,7 +97,8 @@ export const projects: Project[] = [
     id: "tuubaa-twitch",
     title: "tuubaa twitch",
     description: "a twitch bot for the youtuber tuubaa",
-    image: "https://github.com/S42yt/assets/blob/master/assets/tuubaa/tuubaa-twitch.png?raw=true",
+    image:
+      "https://github.com/S42yt/assets/blob/master/assets/tuubaa/tuubaa-twitch.png?raw=true",
     technologies: ["Nextjs", "tmi.js", "TypeScript"],
     category: "web",
     github: "https://github.com/S42yt/UNITY",
