@@ -18,14 +18,14 @@ export default function NotFound() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-background">
+    <div className="min-h-screen flex flex-col items-center justify-center">
       <div
-        className={`text-center max-w-lg px-4 transition-all duration-700 transform ${
+        className={`text-center max-w-xl px-4 transition-all duration-700 transform ${
           isAnimated ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
         }`}
       >
-        <div className="relative w-32 h-32 mx-auto mb-6">
-          <div className="absolute -inset-4 bg-gradient-to-r from-accent/30 to-accent-light/30 rounded-full blur-lg opacity-70 animate-pulse"></div>
+        <div className="relative w-64 h-64 md:w-80 md:h-80 mx-auto mb-10">
+          <div className="absolute -inset-8 bg-gradient-to-r from-accent/30 to-accent-light/30 rounded-full blur-xl opacity-70 animate-pulse"></div>
           <FontAwesomeIcon
             icon={faSadTear}
             className="w-full h-full text-accent animate-bounce-slow"
@@ -57,4 +57,3 @@ export default function NotFound() {
       </div>
     </div>
   );
-}
