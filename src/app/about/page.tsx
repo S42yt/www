@@ -6,6 +6,7 @@ import {
   faLaptopCode,
   faTools,
 } from "@fortawesome/free-solid-svg-icons";
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import {
   faReact,
   faJs,
@@ -62,22 +63,22 @@ const icons = {
     icon: [
       448,
       512,
-      [],
+      [] as string[],
       "f1c0",
       "M448 80v48c0 44.2-100.3 80-224 80S0 172.2 0 128V80C0 35.8 100.3 0 224 0S448 35.8 448 80zM393.2 214.7c20.8-7.4 39.9-16.9 54.8-28.6V288c0 44.2-100.3 80-224 80S0 332.2 0 288V186.1c14.9 11.8 34 21.2 54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3zM0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6V432c0 44.2-100.3 80-224 80S0 476.2 0 432V346.1z",
-    ],
-  },
+    ] as [number, number, string[], string, string],
+  } as IconDefinition,
   faCloud: {
     prefix: "fas",
     iconName: "cloud",
     icon: [
       640,
       512,
-      [],
+      [] as string[],
       "f0c2",
       "M0 336c0 79.5 64.5 144 144 144H512c70.7 0 128-57.3 128-128c0-61.9-44-113.6-102.4-125.4c4.1-10.7 6.4-22.4 6.4-34.6c0-53-43-96-96-96c-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32C167.6 32 96 103.6 96 192c0 2.7 .1 5.4 .2 8.1C40.2 219.8 0 273.2 0 336z",
-    ],
-  },
+    ] as [number, number, string[], string, string],
+  } as IconDefinition,
 };
 
 const skillCategories = [
@@ -215,7 +216,19 @@ const ProfileSection = () => (
   </div>
 );
 
-const SkillCategorySection = ({ category, index }) => (
+interface SkillCategory {
+  name: string;
+  icon: IconDefinition;
+  skills: string[];
+}
+
+const SkillCategorySection = ({
+  category,
+  index,
+}: {
+  category: SkillCategory;
+  index: number;
+}) => (
   <AnimatedSection
     key={category.name}
     className="glass-card p-6"

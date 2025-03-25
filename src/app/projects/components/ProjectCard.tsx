@@ -39,7 +39,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   };
 
   return (
-    <div className="glass-card overflow-hidden transition-all duration-300 group project-card">
+    <div className="glass-card overflow-hidden transition-all duration-300 group project-card hover:scale-[1.02] transform">
       <div className="relative h-48 w-full overflow-hidden card-image-container">
         <div
           className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent 
@@ -57,7 +57,6 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           placeholder="blur"
           blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzAwIiBoZWlnaHQ9IjQ3NSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="
         />
-
         {/* Badges container */}
         <div className="absolute top-3 right-3 flex flex-col gap-2 items-end">
           {/* Featured badge */}
