@@ -42,10 +42,10 @@ export const downloadItems: DownloadItem[] = [
       "https://github.com/S42yt/TradeCycle/blob/master/assets/cycle_success.gif?raw=true",
     category: "minecraft",
     platform: ["windows", "macos", "linux"],
-    version: "1.4.0",
+    version: "1.4.1",
     downloadUrl:
-      "https://github.com/S42yt/TradeCycle/releases/download/v.1.4/tradecycler-1.4.jar",
-    fileName: "tradecycler-1.4.jar",
+      "https://github.com/S42yt/TradeCycle/releases/download/v.1.4.1/tradecycle-1.4.1.jar",
+    fileName: "tradecycle-1.4.1.jar",
     fileSize: "1.58 MB",
     releaseDate: "23.03.2025",
     latest: true,
